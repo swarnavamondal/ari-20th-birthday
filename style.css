@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    justify-content: center;
+    align-items: center;
+}
+
+.starting-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.starting-paragraph {
+    
+}
