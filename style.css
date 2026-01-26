@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    
+
 }
 
 .initial-content {
@@ -28,10 +28,12 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
+
 .starting-paragraph {
     font-size: 1.5rem;
     animation: fadeIn 3.0s ease-in;
@@ -206,44 +208,13 @@ body {
     pointer-events: none;
 }
 
-.slider-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-top: 30px;
+.slider-container {
+    cursor: grab;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-.slider-btn {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.slider-btn:hover {
-    background-color: rgba(255, 255, 255, 1);
-    transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.slider-btn:active {
-    transform: scale(0.95);
-}
-
-.slider-pagination {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: black;
-    min-width: 80px;
-    text-align: center;
+.slider-container:active {
+    cursor: grabbing;
 }
