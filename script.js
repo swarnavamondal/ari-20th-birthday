@@ -157,3 +157,33 @@ function initSlider(sliderSection) {
 
 // Initialize all gallery sliders
 document.querySelectorAll('.gallery-slider, .gallery-slider2').forEach(initSlider);
+
+// Cake Video Logic
+const playCakeBtn = document.getElementById('playCakeBtn');
+const cakeVideo = document.getElementById('cakeVideo');
+if (playCakeBtn && cakeVideo) {
+    const videoContainer = cakeVideo.parentElement;
+    let hasPlayed = false;
+
+    playCakeBtn.addEventListener('click', () => {
+        if (!hasPlayed) {
+            cakeVideo.play();
+            hasPlayed = true;
+        }
+    });
+
+    cakeVideo.addEventListener('play', () => {
+        videoContainer.classList.add('playing');
+    });
+
+    cakeVideo.addEventListener('pause', () => {
+        // We only hide the button when playing. 
+        // If it pauses or ends, we don't want the button back if it's a one-time thing.
+        // Actually, we can keep 'playing' class to keep button hidden forever.
+        // Or handle it in 'ended'.
+    });
+
+    cakeVideo.addEventListener('ended', () => {
+        videoContainer.classList.add('finished');
+    });
+}
