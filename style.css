@@ -321,3 +321,20 @@ body {
 .video-container.finished .play-btn {
     display: none;
 }
+
+.last-message-start {
+    font-size: 1.4rem;
+    animation: fadeIn 3.5s ease-in;
+    text-align: center;
+    padding: 20px;
+    color: black;
+    margin-top: 50vh;
+}
+
+.last-message-paragraph {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
